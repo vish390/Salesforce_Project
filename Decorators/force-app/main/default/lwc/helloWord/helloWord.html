@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="LWC Decorators">
+    <!-- <p>Hi,{parentVar}</p> -->
+    <!-- <div>
+        <lightning-button variant="brand" label="Get Message" onclick={handleMessage}>
+            </lightning-button>
+        </div>
+        <div>
+            <lightning-button variant="brand" label="Call Method" onclick={handleCallMethod}>
+                </lightning-button>
+            </div>
+    <c-child-hello-word></c-child-hello-word>  -->
+
+    <br/>
+
+    <p>@Wire Decorator</p>
+
+    <template if:true={accountList}>
+        <template for:each ={accountList} for:item="acc">
+<p key={acc.Id}>{acc.Name}</p>
+        </template>
+        </template>
+        <template if:true={accountList.error}>
+<p>{accountList.error}</p>
+        </template>
+    </lightning-card>
+</template>
