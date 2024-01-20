@@ -1,0 +1,14 @@
+<template>
+   
+        <lightning-card>
+            <div lwc:if={conData}>
+    <lightning-datatable
+    key-field="id"
+    data={conData}
+    columns={columns}
+    >
+    </lightning-datatable>
+            </div>
+        </lightning-card>
+ 
+</template>

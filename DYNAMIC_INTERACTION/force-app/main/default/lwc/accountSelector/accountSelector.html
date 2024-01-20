@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <div lwc:if={accountData}>
+            <lightning-datatable 
+           key-field="id" 
+           max-row-selection="1" 
+           data={accountData} 
+           columns={columns} 
+           onrowaction={handleRowSelection}
+           >
+
+           </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Toast Container" icon-name="utility:alert">
+ <div class="slds-m-around_medium">
+            <lightning-input label="Title" value={_title} onchange={titleChange}></lightning-input>
+            <lightning-input label="Message" value={message} onchange={messageChange}></lightning-input>
+          
+            <lightning-combobox
+                 name="Variant"
+                 label="Variant"
+                 value={variant}
+                 placeholder="Select Variant"
+                 options={variantOptions}
+                 onchange={variantChange} >
+            </lightning-combobox>
+
+            <lightning-combobox
+                 name="Position"
+                 label="Position"
+                 value={position}
+                 placeholder="Select Position"
+                 options={positionOptions}
+                 onchange={positionChange} >
+            </lightning-combobox>
+
+            <div style="padding:10px">
+                <lightning-button  label="Show Toast" onclick={showNotification}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
